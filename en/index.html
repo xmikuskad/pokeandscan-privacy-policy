@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Privacy policy for PokeAndScan, an independent Android companion app.">
     <title>PokeAndScan Privacy Policy</title>
-    <style>
-      :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.65; }
-      body { max-width: 52rem; margin: 0 auto; padding: 1.25rem; }
-      nav { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0 2rem; }
-      h1, h2 { line-height: 1.25; }
-      a { text-underline-offset: .18em; }
-      .updated { color: color-mix(in srgb, currentColor 72%, transparent); }
-      @media (min-width: 48rem) { body { padding: 2.5rem; } }
-    </style>
+    <link rel="stylesheet" href="../assets/privacy.css">
   </head>
   <body>
     <header>
@@ -30,7 +22,7 @@
       <p>This page describes the current app and the planned MVP scanning features. The current app build is an early scaffold: it stores your language, appearance, and introduction-completion preferences on your device. Scanning, review, and export are not available in this build. The sections below describe how those features are designed to work when they are released.</p>
 
       <h2>On-device data and processing</h2>
-      <p>The planned MVP processes user-selected game-screen content on your Android device. Recognition is local and offline. PokeAndScan does not require an account or a PokeAndScan backend, does not use cloud OCR, and does not upload captured screens.</p>
+      <p>The planned MVP processes user-selected game-screen content on your Android device. Recognition is local and offline. PokeAndScan does not require an account or a PokeAndScan backend, does not use cloud OCR, and does not upload captured screens. The current build has no analytics, advertising, or tracking code, and the planned MVP has no third-party data-collection service.</p>
       <p>When scanning is available, the app will handle scan and snapshot metadata; recognized or manually entered Pokémon fields; review and correction history; and evidence crops needed to review results. Clean records keep a minimal representative appraisal crop. Uncertain, partial, corrected, or nickname-related fields may keep relevant field crops. A missed appraisal event may keep a transition crop. Non-game frames are classified in memory and discarded; they are not retained as images. The full source recording is not copied or retained by default.</p>
 
       <h2>Screen capture and selected recordings</h2>
@@ -47,12 +39,6 @@
       <h2>Contact</h2>
       <p>For privacy questions, contact FalconSocka at <a id="privacy-email">falconsockar [at] gmail [dot] com</a>.</p>
     </main>
-
-    <script>
-      const email = ['falconsockar', 'gmail.com'].join('@');
-      const link = document.getElementById('privacy-email');
-      link.href = `mailto:${email}`;
-      link.textContent = email;
-    </script>
+    <script src="../assets/contact.js" defer></script>
   </body>
 </html>

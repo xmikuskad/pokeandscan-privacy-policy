@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Zásady ochrany súkromia aplikácie PokeAndScan, nezávislej sprievodnej aplikácie pre Android.">
     <title>Zásady ochrany súkromia — PokeAndScan</title>
-    <style>
-      :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.65; }
-      body { max-width: 52rem; margin: 0 auto; padding: 1.25rem; }
-      nav { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0 2rem; }
-      h1, h2 { line-height: 1.25; }
-      a { text-underline-offset: .18em; }
-      .updated { color: color-mix(in srgb, currentColor 72%, transparent); }
-      @media (min-width: 48rem) { body { padding: 2.5rem; } }
-    </style>
+    <link rel="stylesheet" href="../assets/privacy.css">
   </head>
   <body>
     <header>
@@ -30,7 +22,7 @@
       <p>Táto stránka opisuje súčasnú aplikáciu aj plánované funkcie skenovania v MVP. Aktuálna verzia je včasná kostra aplikácie: v zariadení ukladá nastavenie jazyka, vzhľadu a dokončenia úvodu. Skenovanie, kontrola výsledkov ani export v tejto verzii ešte nie sú dostupné. Nasledujúce časti opisujú plánované správanie po ich vydaní.</p>
 
       <h2>Údaje a spracovanie v zariadení</h2>
-      <p>Plánované MVP bude spracúvať obsah obrazovky hry, ktorý vyberiete, priamo vo svojom zariadení Android. Rozpoznávanie bude prebiehať lokálne a offline. Aplikácia nebude vyžadovať účet ani vlastný server PokeAndScan, nebude používať OCR v cloude a nebude odosielať zachytené obrazovky.</p>
+      <p>Plánované MVP bude spracúvať obsah obrazovky hry, ktorý vyberiete, priamo vo svojom zariadení Android. Rozpoznávanie bude prebiehať lokálne a offline. Aplikácia nebude vyžadovať účet ani vlastný server PokeAndScan, nebude používať OCR v cloude a nebude odosielať zachytené obrazovky. Aktuálna verzia neobsahuje analytiku, reklamu ani sledovací kód a plánované MVP nepoužíva službu tretej strany na zber údajov.</p>
       <p>Po sprístupnení skenovania bude aplikácia pracovať s metadátami skenov a snímok, rozpoznanými alebo ručne zadanými údajmi o Pokémonoch, históriou kontroly a opráv a výrezmi potrebnými na kontrolu výsledkov. Pri správne rozpoznaných záznamoch sa uloží minimálny reprezentatívny výrez obrazovky ocenenia. Pri neistých, neúplných alebo opravených údajoch či prezývkach sa môžu uložiť príslušné výrezy. Pri vynechanej obrazovke ocenenia sa môže uložiť výrez prechodu. Obrazovky mimo hry sa vyhodnotia v pamäti a zahodia; neukladajú sa ako obrázky. Celý zdrojový záznam obrazovky sa predvolene nekopíruje ani neuchováva.</p>
 
       <h2>Snímanie obrazovky a vybrané záznamy</h2>
@@ -47,12 +39,6 @@
       <h2>Kontakt</h2>
       <p>V prípade otázok o súkromí kontaktujte FalconSocka na adrese <a id="privacy-email">falconsockar [at] gmail [dot] com</a>.</p>
     </main>
-
-    <script>
-      const email = ['falconsockar', 'gmail.com'].join('@');
-      const link = document.getElementById('privacy-email');
-      link.href = `mailto:${email}`;
-      link.textContent = email;
-    </script>
+    <script src="../assets/contact.js" defer></script>
   </body>
 </html>
