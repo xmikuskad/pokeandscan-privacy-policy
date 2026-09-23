@@ -4,9 +4,14 @@ This folder is the standalone-site staging copy for `xmikuskad/pokeandscan-priva
 
 ## Publish and update
 
-The public site uses `en/index.html` and `sk/index.html`; GitHub Pages serves them at `/en/` and `/sk/`. Enable GitHub Pages from the default branch root and verify both HTTPS pages on mobile and desktop. Keep the pages static; they need no build step or third-party scripts. Update the date and both language versions whenever actual data practices change. Keep this README as maintainer guidance and do not copy it into the public page.
+The public site uses `en/index.html` and `sk/index.html`; GitHub Pages serves them at:
 
-The Android Settings action opens `/sk/` or `/en/` under the canonical Pages base URL according to the saved app language. Change the base only if GitHub Pages reports a different canonical URL.
+- https://xmikuskad.github.io/pokeandscan-privacy-policy/en/
+- https://xmikuskad.github.io/pokeandscan-privacy-policy/sk/
+
+GitHub Pages is enabled from the default branch root. Verify both HTTPS pages on mobile and desktop. Keep the pages static; they need no build step or third-party scripts. Update the date and both language versions whenever actual data practices change. Keep this README as maintainer guidance and do not copy it into the public page.
+
+The Android Settings action opens the Slovak or English URL according to the saved app language. Change the base only if GitHub Pages reports a different canonical URL.
 
 ## Publication blockers found during source review
 
