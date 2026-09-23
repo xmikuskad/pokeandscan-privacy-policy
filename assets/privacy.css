@@ -27,7 +27,7 @@ a {
 }
 
 .updated {
-  color: color-mix(in srgb, currentColor 72%, transparent);
+  opacity: .8;
 }
 
 @media (min-width: 48rem) {
