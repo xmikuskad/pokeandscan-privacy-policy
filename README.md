@@ -1,4 +1,4 @@
-# PokeAndScan privacy policy draft
+# PokeAndScan privacy policy website
 
 This folder is the standalone-site staging copy for `xmikuskad/pokeandscan-privacy-policy`, requested in issue 22. The site has two language URLs: `/en/` and `/sk/`.
 
@@ -15,7 +15,9 @@ The Android Settings action opens the Slovak or English URL according to the sav
 
 ## Implementation notes for maintainers
 
-- The current Android scaffold does not implement scanning, review, or exports. The page distinguishes those planned MVP behaviors from the current build.
+- The current Android source implements user-started live capture, MP4 processing for the supported reference profile, review, and CSV/JSON export. Verify the exact release build and supported profiles before describing a feature as unavailable or planned.
+- During live capture, Android may provide non-game or system-screen frames. The app classifies these in memory, discards the images, and may retain only a warning type and source timestamp; keep that distinction clear in both policy languages.
+- Shared CSV/JSON exports are staged in private app cache; old share-cache files are pruned when a later share is prepared, after seven days, and Android may clear the cache sooner. Preserve this retention detail and clarify that deleting a scan does not delete an already-created export.
 - `AndroidManifest.xml` sets `android:allowBackup="false"`; the legacy and Android 12+ rules explicitly exclude app data. Some Android manufacturers may not honor device-to-device transfer exclusions, so avoid an absolute guarantee for every device.
 - The privacy contact is assembled by first-party JavaScript from separate address components, with a `[at]`/`[dot]` fallback when JavaScript is unavailable. This only reduces simple harvesting; it does not prevent all bots or scraping.
 - The owner requested publication of these pages in the public repository. Review the wording and both URLs whenever actual data practices change.
